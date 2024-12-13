@@ -24,10 +24,13 @@
     
   * The following images are the result of this project:
 
-    
-  - Face Detection Using Haar Cascade Classifier
+  **Face Detection Using Haar Cascade Classifier**
   ![image](https://github.com/user-attachments/assets/f8dd6187-d2af-4a13-bbd9-bbd2e2f30e38)
+
+  **Face Recognition of Bini Members**
   ![image](https://github.com/user-attachments/assets/00b4158f-c166-478e-8230-e027262b882d)
+
+  **Face Detection of Bini Members and Fans**
   ![image](https://github.com/user-attachments/assets/d4140cb8-d331-41f9-a069-a0075a5c4860)
 
 
