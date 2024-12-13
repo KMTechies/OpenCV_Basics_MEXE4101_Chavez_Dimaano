@@ -18,9 +18,9 @@
 
 ## Additional Materials
 
-  -The code is provided in this repository: Face_Detection_Chavez_Dimaano.ipynb
-  -The recorded demonstration of the model is in this link: https://drive.google.com/file/d/1qikTxu705-dBjlFanf15D29DM0_uA4UY/view?usp=sharing
-  -The following images are the result of this project:
+  *The code is provided in this repository: Face_Detection_Chavez_Dimaano.ipynb
+  *The recorded demonstration of the model is in this link: https://drive.google.com/file/d/1qikTxu705-dBjlFanf15D29DM0_uA4UY/view?usp=sharing
+  *The following images are the result of this project:
 
   
 
