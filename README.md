@@ -58,7 +58,7 @@ For inspiration and practical examples we have checked out similar repositories 
 
 ## Conclusion
 
-During this project on face detection and recognition using OpenCV's Haar Cascade in Google Colab, I gained valuable insights into implementing computer vision algorithms. Here's a summary of the findings, challenges, and outcomes:
+During this project on face detection and recognition using OpenCV's Haar Cascade in Google Colab, we gained valuable insights into implementing computer vision algorithms. Here's a summary of the findings, challenges, and outcomes:
 
 **Findings**:  
 - Haar Cascades are efficient for face detection and work well in controlled environments with proper lighting.  
