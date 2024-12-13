@@ -80,6 +80,94 @@ During this project on face detection and recognition using OpenCV's Haar Cascad
 This project not only highlighted the strengths of OpenCV's Haar Cascade but also its limitations, which can be addressed by integrating advanced techniques like deep learning in future iterations.
 
 ## Additional Materials
+### Codes
+
+### Step 1: Clone OpenCV Tutorial Repository
+Clone the repository containing the OpenCV tutorial files.
+```bash
+!git clone https://github.com/misbah4064/opencvTutorial.git
+```
+
+### Step 2: Setup Environment
+Clear the outputs and import necessary libraries.
+```python
+from IPython.display import clear_output
+clear_output()
+
+import cv2
+from google.colab.patches import cv2_imshow  # For displaying images in Colab
+```
+
+### Step 3: Face Detection Using Haar Cascade
+Load the pre-trained Haar Cascade Classifier for face detection, process the image, and draw rectangles around detected faces.
+```python
+# Load Haar Cascade Classifier
+face_cascade = cv2.CascadeClassifier("files/haarcascade_frontalface_default.xml")
+
+# Read an image and convert to grayscale
+img = cv2.imread("/content/3b962895-243d-4d9b-b9d8-85a98dacf4f0.jpg")
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+# Detect faces and draw rectangles
+faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+for (x, y, w, h) in faces:
+    cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 4)
+
+# Display the result
+cv2_imshow(img)
+```
+
+### Step 4: Clone and Install Face Recognition Dependencies
+Clone the repository and install the necessary library.
+```bash
+!git clone https://github.com/misbah4064/face_recognition.git
+!pip install face_recognition
+```
+
+### Step 5: Face Recognition Using Pre-Encoded Profiles
+Create encodings for known faces, detect unknown faces in an image, and label them accordingly.
+```python
+# Import libraries
+import face_recognition
+import numpy as np
+import cv2
+from google.colab.patches import cv2_imshow
+
+# Create encoding profiles for known faces
+face_1 = face_recognition.load_image_file("/content/Colet.PNG")
+face_1_encoding = face_recognition.face_encodings(face_1)[0]
+# Repeat for other faces...
+
+known_face_encodings = [
+    face_1_encoding,  # Add all other encodings here
+]
+
+known_face_names = [
+    "BINI Colet",  # Add corresponding names here
+]
+
+# Recognize faces in an unknown image
+file_name = "/content/photocarts.jpeg"
+unknown_image = face_recognition.load_image_file(file_name)
+unknown_image_to_draw = cv2.imread(file_name)
+
+face_locations = face_recognition.face_locations(unknown_image)
+face_encodings = face_recognition.face_encodings(unknown_image, face_locations)
+
+# Label detected faces
+for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
+    matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
+    name = "Fan"
+    face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
+    best_match_index = np.argmin(face_distances)
+    if matches[best_match_index]:
+        name = known_face_names[best_match_index]
+    cv2.rectangle(unknown_image_to_draw, (left, top), (right, bottom), (0, 255, 0), 3)
+    cv2.putText(unknown_image_to_draw, name, (left, top - 20), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 0, 255), 2, cv2.LINE_AA)
+
+# Display the annotated image
+cv2_imshow(unknown_image_to_draw)
+```
 
   * The code is provided in this repository: Face_Detection_Chavez_Dimaano.ipynb
     
