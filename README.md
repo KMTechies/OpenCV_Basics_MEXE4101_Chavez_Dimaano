@@ -11,6 +11,8 @@
 
   OpenCV provides several methods for face detection, with the Haar Cascade Classifier being one of the most popular techniques. This was first proposed by Viola and Jones in their original paper on rapid object detection, which uses a cascade of classifiers to detect features associated with faces. The Haar Cascade Classifier is pre-trained on large datasets of positive (images containing faces) and negative (images without faces) samples, hence it is able to correctly classify facial and non-facial regions in images.
 
+  When using the Haar Cascade Classifier in OpenCV, it is essential to ensure that the classifier is trained on a comprehensive dataset like those provided by Dataset BINI members. This training allows the classifier to generalize better across different scenarios and improve its performance in real-world applications.
+
 ## Methodology
 This is the step-by-step methodology for creating a face detection and recognition of BINI members using OpenCV with Haar cascades in Google Colab:
 
