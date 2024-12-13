@@ -19,10 +19,17 @@
 ## Additional Materials
 
   * The code is provided in this repository: Face_Detection_Chavez_Dimaano.ipynb
+    
   * The recorded demonstration of the model is in this link: https://drive.google.com/file/d/1qikTxu705-dBjlFanf15D29DM0_uA4UY/view?usp=sharing
+    
   * The following images are the result of this project:
 
-  
+  ![image](https://github.com/user-attachments/assets/f8dd6187-d2af-4a13-bbd9-bbd2e2f30e38)
+  ![image](https://github.com/user-attachments/assets/00b4158f-c166-478e-8230-e027262b882d)
+  ![image](https://github.com/user-attachments/assets/d4140cb8-d331-41f9-a069-a0075a5c4860)
+
+
+
 
 
 
